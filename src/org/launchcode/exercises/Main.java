@@ -1,7 +1,6 @@
 package org.launchcode.exercises;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
 
@@ -18,9 +17,13 @@ public class Main {
         // Test out your CheckFileExtension() function!
     }
 
-    public static void Divide(int x, int y)
+    public static int Divide(int x, int y)
     {
         // Write code here!
+        if (y == 0) {
+            throw new ArithmeticException ( "Cannot divide by zero")
+        }
+        return x/y;
     }
 
     public static int CheckFileExtension(String fileName)
