@@ -21,14 +21,28 @@ public class Main {
     {
         // Write code here!
         if (y == 0) {
-            throw new ArithmeticException ( "Cannot divide by zero")
+            throw new ArithmeticException ( "Cannot divide by zero" );
         }
         return x/y;
     }
 
-    public static int CheckFileExtension(String fileName)
+    public static int CheckFileExtension(String fileName) throws Exception
     {
         // Write code here!
-    }
+        if (fileName == null || fileName.isEmpty()) {
+            throw new Exception ("File name is null or empty.");
+        }
 
+        if (fileName.endsWith(".java")) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    }
+class InvalidFileException extends Exception {
+    public InvalidFileException(String message) {
+        super(message);
+    }
 }
+
